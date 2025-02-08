@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f6fd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e3a8a; /* Full blue background */
+            padding: 20px 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .navbar .logo {
+                font-size: 28px;
+                font-weight: 700;
+                color: white; /* White text */
+            }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white; /* White text for links */
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .container {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            margin-top: 80px;
+            width: 100%;
+            height: calc(100vh - 80px);
+        }
+
+        .card {
+            display: flex;
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 4px solid #1e3a8a;
+        }
+
+        .image-container {
+            flex: 1;
+            border-right: 4px solid #1e3a8a;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: white;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-container h2 {
+            font-size: 32px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .text-container p {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .risk-btn {
+            text-align: center;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            width: fit-content;
+            transition: all 0.3s ease;
+        }
+
+        .risk-btn:hover {
+            background-color: #16306d;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+            }
+            .image-container {
+                border-right: none;
+                border-bottom: 4px solid #1e3a8a;
+            }
+            .text-container {
+                padding: 30px;
+                text-align: center;
+            }
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+                gap: 10px;
+            }
+            .navbar .nav-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <div class="logo">InvestMatch</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="explore.html">Explore</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <!-- Left Side (Image) -->
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/5a/7a/e0/5a7ae0a1753e282676a1dc65b3e5f23d.jpg" alt="Floria Table Settings">
+            </div>
+
+            <!-- Right Side (Text Info) -->
+            <div class="text-container">
+                <h2>FLORIA TABLE SETTINGS</h2>
+                <p>Party Planning Business</p>
+                <p><strong>Founded:</strong> 2015</p>
+                <p><strong>Target Consumers:</strong> M/W in their 20s</p>
+                <p><strong>Quarterly Revenue:</strong> $----</p>
+                <p><strong>Amount of Employees:</strong> 5</p>
+                <a href="#" class="risk-btn">Risk Assessment: 73% Return</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
