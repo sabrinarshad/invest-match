@@ -17,10 +17,10 @@
             background-color: #f3f6fd;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start; /* align to the top of the page */
+            min-height: 100vh; /* Ensure the page height is at least 100% of the viewport */
+            overflow-y: auto; /* Allow vertical scrolling */
             padding: 20px;
-            overflow: hidden;
         }
 
         .navbar {
@@ -68,7 +68,8 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 500px; /* Restrict the width */
-            margin-top: 80px;
+            margin-top: 120px; /* Space for the navbar */
+            margin-bottom: 40px; /* Ensure some space at the bottom */
         }
 
         .sign-up-form h2 {
@@ -132,7 +133,6 @@
     <div class="navbar">
         <div class="logo">InvestMatch</div>
         <div class="nav-links">
-            <a href="index.html">Home</a>
             <a href="dashboard.html">Dashboard</a>
             <a href="explore.html">Explore</a>
             <a href="profile.html">Profile</a>
