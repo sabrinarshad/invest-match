@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <style>
-        body { font-family: 'Inter', sans-serif; text-align: center; padding: 50px; }
-        a { text-decoration: none; color: #1e3a8a; font-weight: 600; font-size: 18px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investor Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sleek font */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .profile-container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px; /* Restrict the width of the profile box */
+    }
+
+    .profile-container img {
+      width: 180px; /* Increased size of the photo */
+      height: 180px; /* Match width to maintain the circle */
+      border-radius: 50%; /* Make the photo a perfect circle */
+      margin-bottom: 20px;
+      object-fit: cover; /* Ensures the image fits well inside the circle */
+    }
+
+    .profile-container h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .profile-container h2 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .profile-container p {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #777;
+    }
+
+    .profile-container a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .profile-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>Your Profile</h1>
-    <p>Manage your account and settings.</p>
-    <a href="index.html">Back to Home</a>
+
+  <div class="profile-container">
+    <img src="https://i.pinimg.com/474x/31/e8/c0/31e8c0fbae0d6852ca8a44c022689d38.jpg" alt="Investor Photo">
+    <h1>Investor Profile</h1>
+    <h2>John Doe</h2>
+    <p>Email: johndoe@example.com</p>
+    <p>Phone: (123) 456-7890</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe" target="_blank">johndoe</a></p>
+    <p>Max Investment Value: $500,000</p>
+    <p>Investor Type: Angel Investor</p>
+  </div>
+
 </body>
 </html>
+
