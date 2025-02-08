@@ -144,7 +144,7 @@
         <h2>Sign Up to InvestMatch</h2>
 
         <!-- User Details Section -->
-        <form>
+        <form id="signUpForm">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Full Name" required>
@@ -181,10 +181,43 @@
                 </select>
             </div>
 
+            <!-- Profile Photo Section -->
+            <div class="form-group">
+                <label for="profile-photo">Profile Photo URL</label>
+                <input type="text" id="profile-photo" name="profile-photo" placeholder="Enter image URL" required>
+            </div>
+
             <!-- Submit Button -->
             <button type="submit" class="submit-btn">Sign Up</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById("signUpForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Collecting form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const linkedin = document.getElementById("linkedin").value;
+            const investmentRange = document.getElementById("investment-range").value;
+            const interests = document.getElementById("interests").value;
+            const investorType = document.getElementById("investor-type").value;
+            const profilePhoto = document.getElementById("profile-photo").value;
+
+            // Storing data in localStorage
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("linkedin", linkedin);
+            localStorage.setItem("investmentRange", investmentRange);
+            localStorage.setItem("interests", interests);
+            localStorage.setItem("investorType", investorType);
+            localStorage.setItem("profilePhoto", profilePhoto);
+
+            // Redirecting to profile page
+            window.location.href = "profile.html";
+        });
+    </script>
 
 </body>
 </html>
